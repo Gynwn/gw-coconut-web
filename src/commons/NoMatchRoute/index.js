@@ -3,10 +3,10 @@ import {
   Link
 } from 'react-router-dom'
 
-const NoMatchRoute = () => (
+const NoMatchRoute = ({ location }) => (
   <div>
-    <h1>Error Page</h1>
-    <Link to="/" >返回首页</Link>
+    <h1>Not Found</h1>
+    <p>The requested URL {location.pathname} was not found on this server.----->> <Link to="/" >返回首页</Link></p>
   </div>
 );
 
