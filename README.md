@@ -8,7 +8,7 @@
 
 ### 使用说明
 
-1. git clone https://gitee.com/gynwnlau/gw-coconut-web.git
+1. git clone 项目
 2. 进入项目目录
 3. `npm i`安装依赖
 4. `yarn start`启动前端项目
