@@ -42,7 +42,7 @@ app.get('/login', function (req, res) {
 })
 
 app.get('/aaa', function (req, res) {
-  send(req, res, result.success("Hello aaa"));
+  send(req, res, result.success("Hello nnn"));
 });
 
 const send = (req, res, result) => {
