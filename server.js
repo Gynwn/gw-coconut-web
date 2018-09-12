@@ -28,13 +28,17 @@ app.use(function (err, req, res, next) {
 
 //登陆接口
 app.get('/login', function (req, res) {
-  res.json(Object.assign({}, result.success(), { userId: req.query.userId }, {
-    token: jwt.sign(
-      { userId: req.query.userId },
-      secretOrPrivateKey,
-      { expiresIn: expiresIn }
-    )
-  }))
+  if (req.query.userId === "admin" && req.query.password === "123456") {
+    res.json(Object.assign({}, result.success(), { userId: req.query.userId }, {
+      token: jwt.sign(
+        { userId: req.query.userId },
+        secretOrPrivateKey,
+        { expiresIn: expiresIn }
+      )
+    }))
+  } else {
+    res.json(Object.assign({}, result.authenError(), { userId: req.query.userId }));
+  }
 })
 
 app.get('/aaa', function (req, res) {
