@@ -5,14 +5,12 @@ import {
   Switch
 } from 'react-router-dom';
 import Home from '../Home';
-import NoMatchRoute from '../commons/NoMatchRoute';
-import Test from '../Test';
+import NoMatchRoute from '../components/NoMatchRoute';
 
 const AppRouteConfig = () => (
   <Router>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/test" component={Test} />
       <Route component={NoMatchRoute} />
     </Switch>
   </Router>

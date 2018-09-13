@@ -4,10 +4,13 @@ const expressJWT = require('express-jwt');
 const config = require('./server/config');
 const result = require('./server/infrastructure/result');
 const jwt = require('jsonwebtoken');
+
 //加密token 校验token时要使用
 const secretOrPrivateKey = config.jwt_secretOrPrivateKey;
+
 // token超时时间。单位：秒。
 const expiresIn = config.jwt_expiresIn
+
 // 拦截器，校验token
 app.use(expressJWT({
   secret: secretOrPrivateKey
